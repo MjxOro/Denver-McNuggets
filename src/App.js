@@ -76,7 +76,7 @@ class App extends React.Component {
 						<ModalLost modal2={this.state.modal2} open={this.state.attempt} close={this.closeModal2} {...routerProps} />
 					}/>
 				<Switch>
-					<Route  path='/how-to-play' component={HowToPlay}/>
+					<Route  path='/more' component={HowToPlay}/>
 					<Route  path='/loyalty' exact render ={(routerProps)=>
 						<LoyaltyPage username={this.state.username} points={this.state.points} menu={this.handleMenu} active={this.state.menuActive} {...routerProps} />
 					}/>

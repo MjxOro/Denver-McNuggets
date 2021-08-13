@@ -1,8 +1,12 @@
 import './HowToPlay.scss'
 import Fries from '../../images/french-fries-active.png'
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 
-export default function HowToPlay() {
+export default function HowToPlay(props) {
     return(
+        <>
+        <Header />
         <section className='howto'>
             <h1 className='howto__header'>Collect points and get rewarded</h1>
             <article className='howto__card'>
@@ -28,5 +32,7 @@ export default function HowToPlay() {
                 MCDONALDS CANADA LOYALITY PROGRAM AT THE TIME OF ENTRY. Participating stores only.
                 Promotion ends 8/31/21. For official rules and how to enter visit</p>
         </section>
+        <Footer menu={this.props.menu} active={this.props.active}/>
+        </>
     )
 }
