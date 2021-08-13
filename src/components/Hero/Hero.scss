@@ -1,0 +1,28 @@
+ 
+
+.hero{
+	height: 300px;
+	display:flex;
+	justify-content: center;
+	&__container{
+		text-align: left;
+		padding: 1rem;
+		display:flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		position: absolute;
+		top: 8rem;
+	}
+	&__msg-container{
+		display: flex;
+	}
+	&__emoji{
+		margin-left: 0.5rem;
+		width: 3rem;
+	}
+	&__username{
+		margin: 0;
+	}
+
+
+}

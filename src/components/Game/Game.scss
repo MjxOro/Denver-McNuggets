@@ -1,0 +1,57 @@
+@use '../../partials/globals';
+@use '../../partials/vairables' as *;
+@use '../../partials/mixins' as *;
+
+.game{
+	pointer-events: none;
+	width: 100%;
+	padding: 1rem;
+	transform: translateY(-5rem);
+	&__row{
+		pointer-events: none;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		margin-bottom: 1rem;
+	}
+	&__card-container{
+		transition: all 500ms ease-in-out;
+		cursor: pointer;
+		pointer-events: all;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		width: 25%;
+		max-width: 8rem;
+		height: 10rem;
+		border-radius: 1rem;
+		box-shadow: 0 4px 12px 0px rgba(0,0,0,.25);
+		&--flip{
+			transform: rotateY(180deg);
+		}
+	}
+	&__card{
+		margin: 0;
+		transition: all 20ms 300ms  ;
+		background-image: url('../../images/wrong.png');
+		background-size: 3rem;
+		background-position: center;
+		background-repeat: no-repeat;
+		pointer-events: none;
+		width: 5rem;
+		height: 5rem;
+		&--pair{
+			background-image: url('../../images/bigmac.png');
+			background-size: 7rem;
+			background-position: center;
+			background-repeat: no-repeat;
+
+		}
+		&--back{
+			background-image: url('../../images/McDonald\'s_Golden_Arches.svg');
+			background-size: 3rem;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+}

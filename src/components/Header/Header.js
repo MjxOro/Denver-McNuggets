@@ -1,6 +1,7 @@
 import react from 'react'
 import Sidebar from './Sidebar'
 import './Header.scss'
+import { Link } from 'react-router-dom'
 
 class Header extends react.Component {
 	state = {
@@ -25,21 +26,8 @@ class Header extends react.Component {
 		return(
 			<header className='hd'>
 				<div className='hd__container'>
-					<a className='hd__logo' />
-					<nav className='hd__left-container'>
-						<figure className='hd__profile' />
-			{!this.state.showSidebar ? <div onClick={this.handleSidebar} className='hd__btn-container'>
-							<div className='hd__burger' />
-						</div>
-				:
-						<div onClick={this.handleSidebar} className='hd__btn-container hd__btn-container--open'>
-							<div className='hd__burger hd__burger--open' />
-						</div>
-
-			}
-					</nav>
-			</div>
-				<Sidebar close={this.handleSidebar} blnClose={this.state.showSidebar} />
+					<Link to='/' className='hd__logo' />
+				</div>
 			</header>
 		)
 	}

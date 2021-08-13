@@ -2,18 +2,18 @@
 @use '../../partials/mixins' as *;
 
 .hd{
-	background-color: $red;
-	display:flex;
-	justify-content: center;
+	background-color: $white;
+	margin: 0;
 	&__container{
+		margin: 0;
 		display:flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
-		height: 5rem;
+		height: auto;
 		width: 100%;
-		max-width: 550px;
-		background-color: $red;
+		background-color: $white;
 		padding: 1rem;
+		border-bottom: 1px solid lightgray;
 		@include tablet{
 			padding: 1rem 2.5rem;
 			max-width: 1080px;
@@ -31,69 +31,6 @@
 		background-position: center;
 		height: 3rem;
 		width: 3rem;
-	}
-	&__left-container{
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-	}
-	&__profile{
-		margin: 0;
-		margin-right: 1rem;
-		border-radius: 50%;
-		background-color: $white;
-		height: 3rem;
-		width: 3rem;
-		cursor: pointer;
-		&:hover{
-			background-color: $yellow;
-			opacity: 70%;
-		}
-	}
-	&__btn-container{
-		align-items: center;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 3rem;
-		width: 3rem;
-		transition: all 500ms ease-in-out;
-		box-sizing: border-box;
-		&--open .hd__burger::before{
-			transform: rotate(45deg) translate(-0.7rem,0.7rem); 
-		}
-		&--open .hd__burger::after{
-			transform: rotate(-45deg) translate(-0.7rem,-0.7rem); 
-		}
-		&:active{
-			background-color:rgb(25, 203, 140,0.2); 
-		}
-	}
-	&__burger{
-		border-radius: 0.25rem;
-		background-color: brown;
-		height: 0.25rem;
-		width: 2rem;
-		transition: all 500ms ease-in-out;
-		&--open{
-			background-color: transparent;
-		}
-		&::before,&::after{
-			content: '';
-			background-color: $yellow;
-			border-radius: 0.25rem;
-			position: absolute;
-			width: 2rem;
-			height: 0.25rem;
-			transition: all 500ms ease-in-out;
-		}
-		&::before{
-			transform: translateY(-0.5rem) translateX(-1rem);
-		}
-		&::after{
-			transform: translateY(0.5rem) translateX(-1rem);
-		}
-
 	}
 	
 
