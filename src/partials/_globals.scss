@@ -1,0 +1,25 @@
+@import './variables';
+@import './fonts';
+@import './mixins';
+html{
+	box-sizing: border-box;
+	font-size: 100%;
+	height:100%;
+	width:100%;
+	box-sizing: border-box;
+}
+*{
+	box-sizing: inherit;
+}
+body{
+	font-family: 'helveltica-nue';
+	color:$font-black;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+.btn{
+}
+.btn:hover{
+}

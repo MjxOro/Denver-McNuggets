@@ -1,0 +1,59 @@
+@use '../../partials/vairables' as *;
+@use '../../partials/mixins' as *;
+
+.sidebar{
+	pointer-events: none;
+	position:fixed;
+	top: 7rem;
+	width: 100vw;
+	display:flex;
+	z-index: -1;
+	justify-content: flex-end;
+	&--closed{ 
+		visibility: hidden;
+		background-color: transparent;
+		z-index: -1;
+		background-color: initial;
+		height:auto;
+		width: 100%;
+		max-width: 1480px;
+		top: 7rem;
+	}
+
+	&__nav{
+		border-radius: 0.25rem;
+		border: 1px solid $black;
+		pointer-events: all;
+		display: flex;
+		top: 7rem;
+		height:auto;
+		flex-direction: column;
+		background-color: $white;
+		transition: all 500ms ease-in-out;
+		width: 20rem;
+		height:auto;
+		&--closed{
+			transform: translateY(-10rem);
+				
+		}
+	}
+
+	&__close-container{
+		display: flex;
+		justify-content: flex-end;
+		background-color: $red;
+		height: 4rem;
+	}
+	&__greeting{
+		margin: 0;
+		color: $white;
+	}
+	&__link-container{
+		display: flex;
+		flex-direction: column;
+	}
+	&__link{
+		color: $font-black;
+		border-top: 1px solid $black;
+	}
+}
