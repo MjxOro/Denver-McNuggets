@@ -12,14 +12,20 @@
 		position: absolute;
 		top: 5rem;
 	}
+	&__title{
+		margin: 0;
+	}
 	&__msg-container{
 		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	&__emoji{
 		margin-left: 0.5rem;
 		width: 3rem;
 	}
 	&__username{
+		text-align: bottom;
 		margin: 0;
 	}
 

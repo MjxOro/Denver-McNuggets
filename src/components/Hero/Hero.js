@@ -23,8 +23,9 @@ const Hero = (props) =>{
 
 				}}
 			>
+				<h1 className='hero__title'>Good afternoon </h1>
 				<div className='hero__msg-container'>
-					<h1 className='hero__title'>Good afternoon </h1>
+					<h1 className='hero__username'>{props.username}</h1>
 					<motion.p className='hero__emoji'
 						animate={{
 							rotate:[-10,15],
@@ -32,7 +33,6 @@ const Hero = (props) =>{
 						transition={{yoyo: Infinity}}
 					>👋</motion.p>
 				</div>
-					<h1 className='hero__username'>{props.username}</h1>
 					<p className='hero__rewards'>Rewards Points Balance: {props.points}</p>
 					<p className='hero__rewards hero__rewards--attempts'>Attempts Left: {String(props.attempts)}</p>
 			</motion.div>

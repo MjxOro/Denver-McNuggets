@@ -4,7 +4,7 @@ import './Hero2.scss'
 const HeroL = (props) =>{
 	console.log(props.attempts)
 	return(
-		<section className='hero'>
+		<section className='heroL'>
 			<motion.div className='hero__container'
 				initial={{
 					opacity: 0,
@@ -23,17 +23,17 @@ const HeroL = (props) =>{
 
 				}}
 			>
-				<div className='hero__msg-container'>
-					<h1 className='hero__title'>Good afternoon </h1>
-					<motion.p className='hero__emoji'
+				<h1 className='heroL__title'>Good afternoon </h1>
+				<div className='heroL__msg-container'>
+					<h1 className='heroL__username'>{props.username}</h1>
+					<motion.p className='heroL__emoji'
 						animate={{
 							rotate:[-10,15],
 						}}
 						transition={{yoyo: Infinity}}
 					>👋</motion.p>
 				</div>
-					<h1 className='hero__username'>{props.username}</h1>
-					<p className='hero__rewards'>Rewards Points Balance: {props.points}</p>
+					<p className='heroL__rewards'>Rewards Points Balance: {props.points}</p>
 			</motion.div>
 		</section>
 	)

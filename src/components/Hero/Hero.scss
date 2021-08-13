@@ -13,8 +13,12 @@
 		position: absolute;
 		top: 5rem;
 	}
+	&__title{
+		margin: 0;
+	}
 	&__msg-container{
 		display: flex;
+		align-items: center;
 	}
 	&__emoji{
 		margin-left: 0.5rem;
