@@ -11,7 +11,7 @@ const ModalInit = (props) =>{
 					<h3 className='modalI__greeting'>Get rewarded.</h3>
 					<div className='modalI__group-msg'>
 						<p className='modalI__greeting'>Earn points with every purchase</p>
-						<p className='modalI__greeting'>redeem for special offers</p>
+						<p className='modalI__greeting'>Redeem for special deals</p>
 						<p className='modalI__greeting'>Get access to special offers</p>
 					</div>
 					<p className='modalI__message'>{"Make a pair with items on our menu with our new card games!"}</p>
