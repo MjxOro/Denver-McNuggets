@@ -5,7 +5,11 @@ import LandingPage from './pages/LandingPage/LandingPage'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import LoyaltyPage from './pages/LoyaltyPage/LoyaltyPage';
 import ModalInit from './components/ModalInit/ModalInit';
+<<<<<<< HEAD
 import ModalLost from './components/ModalLost/ModalLost';
+=======
+import HowToPlay from './components/HowToPlay/HowToPlay';
+>>>>>>> 50d7147294d63ea57b448d5d19e8b1e275653f63
 
 
 class App extends React.Component {
@@ -75,6 +79,7 @@ class App extends React.Component {
 						<ModalLost modal2={this.state.modal2} open={this.state.attempt} close={this.closeModal2} {...routerProps} />
 					}/>
 				<Switch>
+					<Route  path='/how-to-play' component={HowToPlay}/>
 					<Route  path='/loyalty' exact render ={(routerProps)=>
 						<LoyaltyPage username={this.state.username} points={this.state.points} menu={this.handleMenu} active={this.state.menuActive} {...routerProps} />
 					}/>
