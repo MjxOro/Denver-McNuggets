@@ -69,20 +69,20 @@ class App extends React.Component {
 			<>
 			<BrowserRouter>
 				<div className="App">
-					<Route  path='/' exact render ={(routerProps)=>
+					<Route  path='/loyalty' exact render ={(routerProps)=>
 						<ModalInit open={this.state.modal} close={this.closeModal} {...routerProps} />
 					}/>
-					<Route  path='/' exact render ={(routerProps)=>
+					<Route  path='/loyalty' exact render ={(routerProps)=>
 						<ModalLost modal2={this.state.modal2} open={this.state.attempt} close={this.closeModal2} {...routerProps} />
 					}/>
 				<Switch>
 					<Route  path='/more' exact render ={(routerProps)=>
 						<MorePage username={this.state.username} points={this.state.points} menu={this.handleMenu} active={this.state.menuActive} {...routerProps} />
 					}/>
-					<Route  path='/loyalty' exact render ={(routerProps)=>
+					<Route  path='/' exact render ={(routerProps)=>
 						<LoyaltyPage username={this.state.username} points={this.state.points} menu={this.handleMenu} active={this.state.menuActive} {...routerProps} />
 					}/>
-					<Route  path='/'  render ={(routerProps)=>
+					<Route  path='/loyalty'  render ={(routerProps)=>
 						<LandingPage getAttempt={this.getAttempt} attempts={this.state.attempt} win={this.getWin}username={this.state.username} points={this.state.points} menu={this.handleMenu} active={this.state.menuActive} {...routerProps} />
 					}/>
 						

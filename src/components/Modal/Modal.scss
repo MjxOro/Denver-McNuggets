@@ -30,6 +30,16 @@
 		}
 
 	}
+	&__logo{
+		margin: 0;
+		width: 5rem;
+		height: 5rem;
+		align-self: center;
+		background-image: url('../../images/bigMacc.png');
+		background-position: center;
+		background-size: 5rem;
+
+	}
 	&__close{
 		margin: 0;
 		align-self: flex-end;
@@ -38,6 +48,30 @@
 		background-image: url('../../images/close_black_24dp.svg');
 		background-position: center;
 		background-size: 2rem;
+	}
+	&__socials{
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	&__icon{
+		margin: 0;
+		width: 5rem;
+		height: 5rem;
+		background-repeat: no-repeat;
+		background-image: url('../../images/tiktok.png');
+		background-position: center;
+		background-size: 2rem;
+		&--i{
+			background-image: url('../../images/insta.png');
+			background-size: 2rem;
+
+		}
+		&--f{
+			background-image: url('../../images/face.png');
+			background-size: 1rem;
+		}
+
 	}
 	
 }

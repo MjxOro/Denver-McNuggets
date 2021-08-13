@@ -32,7 +32,7 @@ const Offers = () =>{
 				<p className='offers__game-text'>Enter for your chance to win.</p>
 				<p className='offers__game-text'>First play is on us!</p>
 				<div className='offers__btn-container'>
-					<Link to='/' className='offers__btn'>Play Now</Link>
+					<Link to='/loyalty' className='offers__btn'>Play Now</Link>
 					<figure className='offers__macbook' />
 				</div>
 
