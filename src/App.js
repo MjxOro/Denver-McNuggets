@@ -5,6 +5,7 @@ import LandingPage from './pages/LandingPage/LandingPage'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import LoyaltyPage from './pages/LoyaltyPage/LoyaltyPage';
 import ModalInit from './components/ModalInit/ModalInit';
+import ModalLost from './components/ModalLost/ModalLost';
 
 
 class App extends React.Component {
@@ -13,12 +14,18 @@ class App extends React.Component {
 		menuActive: [false,true,true,true,true],
 		username: 'Nancy',
 		points: 500,
-		modal: true,
+		modal: true, //true
 		win: false,
+		attempt: 4, //4
+		modal2: true,
 
 	}
 	componentDidMount = () =>{
 
+	}
+	getAttempt = (tries) => {
+		console.log(tries,'poggers')
+		this.setState({attempt: tries})
 	}
 	getWin = (obj) =>{
 		this.setState({win: obj,points: this.state.points + 500,})
@@ -50,6 +57,10 @@ class App extends React.Component {
 	}
 	closeModal = () =>{
 		this.setState({modal:false})
+
+	}
+	closeModal2 = () =>{
+		this.setState({modal2: false})
 	}
 	render = () =>{
 		return (
@@ -60,12 +71,15 @@ class App extends React.Component {
 					<Route  path='/' exact render ={(routerProps)=>
 						<ModalInit open={this.state.modal} close={this.closeModal} {...routerProps} />
 					}/>
+					<Route  path='/' exact render ={(routerProps)=>
+						<ModalLost modal2={this.state.modal2} open={this.state.attempt} close={this.closeModal2} {...routerProps} />
+					}/>
 				<Switch>
 					<Route  path='/loyalty' exact render ={(routerProps)=>
 						<LoyaltyPage username={this.state.username} points={this.state.points} menu={this.handleMenu} active={this.state.menuActive} {...routerProps} />
 					}/>
 					<Route  path='/'  render ={(routerProps)=>
-						<LandingPage win={this.getWin}username={this.state.username} points={this.state.points} menu={this.handleMenu} active={this.state.menuActive} {...routerProps} />
+						<LandingPage getAttempt={this.getAttempt} attempts={this.state.attempt} win={this.getWin}username={this.state.username} points={this.state.points} menu={this.handleMenu} active={this.state.menuActive} {...routerProps} />
 					}/>
 						
 				</Switch>

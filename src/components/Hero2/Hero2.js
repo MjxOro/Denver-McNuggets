@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import './Hero.scss'
+import './Hero2.scss'
 
-const Hero = (props) =>{
+const HeroL = (props) =>{
 	console.log(props.attempts)
 	return(
 		<section className='hero'>
@@ -34,10 +34,9 @@ const Hero = (props) =>{
 				</div>
 					<h1 className='hero__username'>{props.username}</h1>
 					<p className='hero__rewards'>Rewards Points Balance: {props.points}</p>
-					<p className='hero__rewards hero__rewards--attempts'>Attempts Left: {String(props.attempts)}</p>
 			</motion.div>
 		</section>
 	)
 
 }
-export default Hero
+export default HeroL

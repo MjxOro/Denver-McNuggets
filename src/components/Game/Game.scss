@@ -33,8 +33,8 @@
 	&__card{
 		margin: 0;
 		transition: all 20ms 300ms  ;
-		background-image: url('../../images/wrong.png');
-		background-size: 3rem;
+		background-image: url('../../images/fries.png');
+		background-size: 7rem;
 		background-position: center;
 		background-repeat: no-repeat;
 		pointer-events: none;
@@ -42,11 +42,29 @@
 		height: 5rem;
 		&--pair{
 			background-image: url('../../images/bigmac.png');
+			background-size: 8rem;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		&--one{
+			background-image: url('../../images/wrap.png');
+			background-size: 8rem;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		&--two{
+			background-image: url('../../images/mcflurry.png');
+			background-size: 10rem;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		&--three{
+			background-image: url('../../images/jrChicken.png');
 			background-size: 7rem;
 			background-position: center;
 			background-repeat: no-repeat;
-
 		}
+
 		&--back{
 			background-image: url('../../images/McDonald\'s_Golden_Arches.svg');
 			background-size: 3rem;

@@ -13,8 +13,8 @@ class LandingPage extends React.Component{
 		return(
 			<>
 				<Header />
-				<Hero points={this.props.points} username={this.props.username}/>
-				<Game win={this.props.win} handleWin={this.props.handleWin}/>
+				<Hero attempts={this.props.attempts} points={this.props.points} username={this.props.username}/>
+				<Game getAttempt={this.props.getAttempt} win={this.props.win} handleWin={this.props.handleWin}/>
 				<Footer menu={this.props.menu} active={this.props.active}/>
 			</>
 

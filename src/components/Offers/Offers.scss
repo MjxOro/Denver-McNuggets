@@ -10,6 +10,8 @@
 	&__top-container{
 		display:flex;
 		justify-content: space-between;
+		box-sizing: unset;
+		overflow: hidden;
 		align-items: center;
 	}
 	&__reward-title{
@@ -25,9 +27,9 @@
 	}
 	&__reward-container{
 		width: 100%;
-		height: 10rem;
-		border-radius: 10px;
-		box-shadow: 0 4px 12px 0px rgba(0,0,0,.25);
+		height: 7.5rem;
+		display: flex;
+		justify-content: space-around;
 
 	}
 	&__game{
@@ -43,6 +45,7 @@
 	&__game-text{
 		color: #787878;
 		text-align: left;
+		margin-top: 1rem;
 	}
 	&__btn-container{
 		display:flex;
@@ -54,32 +57,75 @@
 		background-color: $yellow;
 		color: $black;
 		max-height: 3rem;
-		margin-right: 1rem; 
 		width: 8rem;
 		padding: 1rem 1.5rem;
 		align-self: flex-end;
 		white-space: nowrap;
+		margin-right: 2rem;
 	}
-	&__fries{
+	&__macbook{
+		align-self: flex-end;
 		margin: 0;
-		width: 6rem;
-		height: 10rem;
-		background-image: url('../../images/fries.png');
-		background-size: 6rem;
-		background-position: center;
+		width: 10rem;
+		height: 8rem;
+		background-image: url('../../images/macbook.png');
+		background-size: 10rem;
+		background-position: center 0.5rem;
 		background-repeat: no-repeat;
 		margin-right: 1rem;
-		box-shadow: 0 4px 12px 0px rgba(0,0,0,.25);
 	}
-	&__logo{
+	&__square{
+		text-align: center;
+		display:flex;
+		flex-direction: column;
+		height: inherit;
+		width: inherit;
+		border-radius: 10px;
+		box-shadow: 0 4px 12px 0px rgba(0,0,0,.25);
+		margin-right: 0.5rem;
+	}
+	&__cost{
 		margin: 0;
-		width: 6rem;
-		height: 10rem;
-		background-image: url('../../images/McDonald\'s_Golden_Arches.svg');
+	}
+	&__img1{
+		align-self: flex-end;
+		margin: 0;
+		width: 5rem;
+		height: 5rem;
+		background-image: url('../../images/iceCream.png');
 		background-size: 3rem;
 		background-position: center;
 		background-repeat: no-repeat;
-		box-shadow: 0 4px 12px 0px rgba(0,0,0,.25);
+	}
+	&__img2{
+		align-self: flex-end;
+		margin: 0;
+		width: 5rem;
+		height: 5rem;
+		background-image: url('../../images/pie.png');
+		background-size: 5rem;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	&__img3{
+		align-self: flex-end;
+		margin: 0;
+		width: 5rem;
+		height: 5rem;
+		background-image: url('../../images/fish.png');
+		background-size: 5rem;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	&__img4{
+		align-self: flex-end;
+		margin: 0;
+		width: 5rem;
+		height: 5rem;
+		background-image: url('../../images/combo.png');
+		background-size: 5rem;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 
 

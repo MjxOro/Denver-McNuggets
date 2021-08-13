@@ -1,8 +1,5 @@
 import React from 'react'
 import './Game.scss'
-import backFace from '../../images/McDonald\'s_Golden_Arches.svg'
-import pair from '../../images/bigmac.png'
-import wrong from '../../images/wrong.png'
 import Modal from '../Modal/Modal'
 
 class Game extends React.Component{
@@ -10,6 +7,7 @@ class Game extends React.Component{
 		frontFace: [false,false,false,false,false,false],
 		win: false,
 		flip: false,
+		attempt: 4,
 		
 	}
 	componentDidUpdate = (prevProps, prevState) =>{
@@ -24,7 +22,8 @@ class Game extends React.Component{
 			}
 			else{
 				setTimeout(() =>{
-					this.setState({frontFace:[false,false,false,false,false,false] ,win: false,})
+					this.setState({frontFace:[false,false,false,false,false,false] ,win: false,attempt: this.state.attempt-1})
+					this.props.getAttempt(this.state.attempt)
 					console.log('loose')
 				},700)
 			}
@@ -35,46 +34,47 @@ class Game extends React.Component{
 	}
 
 	handleChoice = (e) =>{
-		this.handleFlip()
-		console.log(e.target)
-		let arr = this.state.frontFace;
-		const filtered = this.state.frontFace.filter(elem=>{return elem === true})
-		console.log(filtered.length)
-		if(filtered.length < 2){
-			switch(e.target.id){
-				case 'one':
-					arr[0] = true;
-					this.setState({frontFace: arr})
-					break;
-				case 'two':
-					arr[1] = true;
-					this.setState({frontFace: arr})
-					break;
-				case 'three':
-					arr[2] = true;
-					this.setState({frontFace: arr})
-					break;
-				case 'four':
-					arr[3] = true;
-					this.setState({frontFace: arr})
-					break;
-				case 'five':
-					arr[4] = true;
-					this.setState({frontFace: arr})
-					break;
-				case 'six':
-					arr[5] = true;
-					this.setState({frontFace: arr})
-					break;
-				default:
-					console.log('none found')
+		if(this.state.attempt > 0){
+			console.log(e.target)
+			let arr = this.state.frontFace;
+			const filtered = this.state.frontFace.filter(elem=>{return elem === true})
+			console.log(filtered.length)
+			if(filtered.length < 2){
+				switch(e.target.id){
+					case 'one':
+						arr[0] = true;
+						this.setState({frontFace: arr})
+						break;
+					case 'two':
+						arr[1] = true;
+						this.setState({frontFace: arr})
+						break;
+					case 'three':
+						arr[2] = true;
+						this.setState({frontFace: arr})
+						break;
+					case 'four':
+						arr[3] = true;
+						this.setState({frontFace: arr})
+						break;
+					case 'five':
+						arr[4] = true;
+						this.setState({frontFace: arr})
+						break;
+					case 'six':
+						arr[5] = true;
+						this.setState({frontFace: arr})
+						break;
+					default:
+						console.log('none found')
+				}
+				console.log(this.state.frontFace)
 			}
-			console.log(this.state.frontFace)
 		}
-	}
-	handleFlip = () =>{
-		console.log('handleclick')
+		else{
+			
 
+		}
 	}
 
 	render = () =>{
@@ -94,7 +94,7 @@ class Game extends React.Component{
 						<div onClick={this.handleChoice} id='two' className={this.state.frontFace[1]?'game__card-container':'game__card-container game__card-container--flip'}>
 							{
 								this.state.frontFace[1] ? 
-								<figure className='game__card' />
+								<figure className='game__card game__card--one' />
 								:
 								<figure className='game__card game__card--back' />
 							}
@@ -113,7 +113,7 @@ class Game extends React.Component{
 						<div onClick={this.handleChoice} id='four' className={this.state.frontFace[3]?'game__card-container':'game__card-container game__card-container--flip'}>
 							{
 								this.state.frontFace[3] ? 
-								<figure className='game__card' />
+								<figure className='game__card game__card--two' />
 								:
 								<figure className='game__card game__card--back' />
 							}
@@ -129,7 +129,7 @@ class Game extends React.Component{
 						<div onClick={this.handleChoice} id='six' className={this.state.frontFace[5]?'game__card-container':'game__card-container game__card-container--flip'}>
 							{
 								this.state.frontFace[5] ? 
-								<figure className='game__card' />
+								<figure className='game__card game__card--three' />
 								:
 								<figure  className='game__card game__card--back' />
 							}
