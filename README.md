@@ -3,7 +3,7 @@ This project displays a strategy to improve McDonald’s loyalty program to keep
 ## Quick Start
 - clone the repository using the command `git clone https://github.com/MjxOro/Denver-McNuggets.git`
 - Install the dependancies using `npm install`
-- Run the app using `npm install`
+- Run the app using `npm start`
 
 The app is currently not responsive for all view widths, for the best user experience shrink browser window's width to a mobile size.
 OR
